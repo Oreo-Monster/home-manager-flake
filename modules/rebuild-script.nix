@@ -42,7 +42,7 @@
         || ( ${pkgs.alejandra}/bin/alejandra . ; echo "formatting failed!" && exit 1)
 
       echo -e "===================================\nRebuilding home-manager...\n==================================="
-      home-manager switch --flake .#eda
+      home-manager switch --flake .#eda &>.home-manager-switch.log || (cat .home-manager-switch.log | grep --color error && exit 1)
       current=$(home-manager generations | head -n 1)
 
       echo -e "===================================\nCommiting changes...\n==================================="
