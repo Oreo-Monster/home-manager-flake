@@ -9,7 +9,7 @@ replacing old 'home-manager-path'
 installing 'home-manager-path'
 Activating linkGeneration
 Cleaning up orphan links from /home/eda
-No change so reusing latest profile generation 51
+No change so reusing latest profile generation 52
 Creating home file links in /home/eda
 Activating onFilesChange
 Activating reloadSystemd

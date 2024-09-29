@@ -43,6 +43,7 @@
 
       echo -e "===================================\nRebuilding home-manager...\n==================================="
       home-manager switch --flake .#eda &>.home-manager-switch.log || (cat .home-manager-switch.log | grep --color error && exit 1)
+      echo -e "\033[0;32mSuccess!\033[0m"
       current=$(home-manager generations | head -n 1)
 
       echo -e "===================================\nCommiting changes...\n==================================="
