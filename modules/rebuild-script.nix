@@ -9,8 +9,9 @@
 
       # Early return if no changes were detected (thanks @singiamtel!)
       echo -e "===================================\n  Detecting Changes...\n==================================="
+      git diff --minimal --ignore-blank-lines --color -U0 '*.nix' | cat
       if git diff --quiet '*.nix'; then
-          read -p "No changes detected, build anyways? [Y|n] " -n 1 -r
+          read -p "No changes detected, build anyways? (y|N) " -n 1 -r
           echo
           if [[ ! $REPLY =~ ^[Yy]$ ]]
           then
@@ -19,7 +20,20 @@
               exit 0
           fi
       fi
-      git diff --minimal --ignore-blank-lines --color -U0 '*.nix' | cat
+
+      #If not already flagged
+      if [[ ! $REPLY =~ ^[Yy]$ ]]
+      then
+          read -p "Continue? (Y|n)" -n 1 -r
+          echo
+          if [[ ! $REPLY =~ ^[Yy]$ ]]
+              then
+                  echo "exiting..."
+                  popd
+                  exit 0
+          fi
+      fi
+
       git add .
 
       # Autoformat your nix files
