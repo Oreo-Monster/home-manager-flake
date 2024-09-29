@@ -32,24 +32,5 @@
   in {
     homeConfigurations."eda" = createHomeConfiguration "x86_64-linux" ./hosts/eda/home.nix;
     homeConfigurations."wright" = createHomeConfiguration "aarch64-darwin" ./hosts/wright/home.nix;
-
-    # homeConfigurations."eda" = home-manager.lib.homeManagerConfiguration {
-    #   inherit pkgs;
-    #   extraSpecialArgs = {inherit inputs;};
-    #
-    #   modules = [
-    #     ./hosts/eda/home.nix
-    #     catppuccin.homeManagerModules.catppuccin
-    #   ];
-    # };
-    # homeConfigurations."wright" = home-manager.lib.homeManagerConfiguration {
-    #   inherit pkgs;
-    #   extraSpecialArgs = {inherit inputs;};
-    #
-    #   modules = [
-    #     ./hosts/wright/home.nix
-    #     catppuccin.homeManagerModules.catppuccin
-    #   ];
-    # };
   };
 }
