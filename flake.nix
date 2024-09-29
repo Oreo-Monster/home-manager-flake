@@ -24,11 +24,21 @@
       inherit pkgs;
 
       modules = [
-        ./home.nix
+        ./hosts/eda/home.nix
         catppuccin.homeManagerModules.catppuccin
       ];
 
       extraSpecialArgs = {inherit inputs;};
+    };
+    homeConfigurations."wright" =  home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      extraSpecialArgs = {inherit inputs;};
+
+      modules = [
+        ./hosts/wright/home.nix
+        catppuccin.homeManagerModules.catppuccin
+      ];
+
     };
   };
 }
