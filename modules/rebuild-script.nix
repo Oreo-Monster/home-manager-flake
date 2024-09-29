@@ -92,6 +92,7 @@
 
       echo -e "===================================\nRebuilding home-manager...\n==================================="
       sudo nixos-rebuild switch --flake .#default &>.nixos-switch.log || (cat .nixos-switch.log | grep --color error && exit 1)
+      echo -e "\033[0;32mSuccess!\033[0m"
       current=$(nixos-rebuild list-generations | grep current)
 
       echo -e "===================================\nCommiting changes...\n==================================="
