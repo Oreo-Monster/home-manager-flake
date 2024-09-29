@@ -20,22 +20,22 @@
 
   home.file = {
     ".config/nvim" = {
-      source = ./nvim;
+      source = ./../../nvim;
       recursive = true;
     };
     ".background-image" = {
-      source = ./desktop-bkgs/cubes.jpg;
+      source = ./../../desktop-bkgs/cubes.jpg;
     };
   };
 
   imports = [
-    ./modules/tmux.nix
-    ./modules/git.nix
-    ./modules/zsh.nix
-    ./modules/i3.nix
-    ./modules/kitty.nix
-    ./modules/catppuccin.nix
-    ./modules/rebuild-script.nix
+    ./../../modules/tmux.nix
+    ./../../modules/git.nix
+    ./../../modules/zsh.nix
+    ./../../modules/i3.nix
+    ./../../modules/kitty.nix
+    ./../../modules/catppuccin.nix
+    ./../../modules/rebuild-script.nix
   ];
 
   home.sessionVariables = {

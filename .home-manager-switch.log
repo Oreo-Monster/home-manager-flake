@@ -1,4 +1,13 @@
 warning: Git tree '/home/eda/.home-manager' is dirty
+these 4 derivations will be built:
+  /nix/store/36vxzrsjy68jvsrfgc6263iqvh5dvlaq-nix-build.drv
+  /nix/store/lj747k9arqij4bl8ywyqrh8w3mnr0hzs-home-manager-path.drv
+  /nix/store/wj2awvpz7rq09d932nbgl08sy97xcpzg-activation-script.drv
+  /nix/store/xhdskqdprxa2h4dpyhssb0xxcdh20lb3-home-manager-generation.drv
+building '/nix/store/36vxzrsjy68jvsrfgc6263iqvh5dvlaq-nix-build.drv'...
+building '/nix/store/lj747k9arqij4bl8ywyqrh8w3mnr0hzs-home-manager-path.drv'...
+building '/nix/store/wj2awvpz7rq09d932nbgl08sy97xcpzg-activation-script.drv'...
+building '/nix/store/xhdskqdprxa2h4dpyhssb0xxcdh20lb3-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkKittyTheme
@@ -7,9 +16,10 @@ Activating writeBoundary
 Activating installPackages
 replacing old 'home-manager-path'
 installing 'home-manager-path'
+building '/nix/store/s2n0ijrw726ilqz7kz68g9lwdlkfqriq-user-environment.drv'...
 Activating linkGeneration
 Cleaning up orphan links from /home/eda
-No change so reusing latest profile generation 52
+Creating profile generation 53
 Creating home file links in /home/eda
 Activating onFilesChange
 Activating reloadSystemd
