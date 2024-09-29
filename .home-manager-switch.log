@@ -1,0 +1,16 @@
+warning: Git tree '/home/eda/.home-manager' is dirty
+Starting Home Manager activation
+Activating checkFilesChanged
+Activating checkKittyTheme
+Activating checkLinkTargets
+Activating writeBoundary
+Activating installPackages
+replacing old 'home-manager-path'
+installing 'home-manager-path'
+Activating linkGeneration
+Cleaning up orphan links from /home/eda
+No change so reusing latest profile generation 51
+Creating home file links in /home/eda
+Activating onFilesChange
+Activating reloadSystemd
+warning: Git tree '/home/eda/.home-manager' is dirty
